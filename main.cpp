@@ -14,15 +14,16 @@ int main()
     cout << "please enter the movie name:" << endl;
 
     
-    cin >> movie_name;
+    cin.get(char) = movie_name;
 
     cout << "Please enter the amount of adult tickets sold:"<< endl;
 
-    cin >> adult_tickets;
+    cin.get(int) >> adult_tickets;
 
-    cout << "please enter the amount of child tickets sold:" 
+    cout << "please enter the amount of child tickets sold:" ;
 
-    cin >> child_tickets;
+    cin.get(int) >> child_tickets;
+
 
 
 
