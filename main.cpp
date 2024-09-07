@@ -1,32 +1,58 @@
 #include <iostream>
 #include <iomanip> // el uso de iomanip es porque para este projecto se usan muchos input manipulators
+#include <string>
 using namespace std; // basic starter for programming in c++
 
 
 int main()
 {
     int adult_tickets, child_tickets;
-    char movie_name;
+    string movie_name;
     double gross_box, net_box, paid;
 
     cout << "This program calculates the Gross and Net Box office profit and the distributer's profit of a movie playing in a theater." << endl;
 
     cout << "please enter the movie name:" << endl;
 
-    
-    cin.get(char) = movie_name;
+    cin>>movie_name;
 
     cout << "Please enter the amount of adult tickets sold:"<< endl;
 
-    cin.get(int) >> adult_tickets;
-
-    cout << "please enter the amount of child tickets sold:" ;
-
-    cin.get(int) >> child_tickets;
+    cin>>adult_tickets;
 
 
+    cout << "please enter the amount of child tickets sold:"<< endl;
+
+    cin>>child_tickets;
+
+    gross_box= (adult_tickets*10) + (child_tickets*6);
+    net_box= (gross_box/100)*20;
+    paid= gross_box - net_box;
+    //the basic mathematical equation for the gross box, net box and paid
+
+    cout<< "Movie name:"<< setw(15)<<movie_name<< endl;
+
+    cout<< "Adult tickets sold:"<< setw(15) << adult_tickets << endl;
+
+    cout<< "child tickets sold:"<< setw(15)<< child_tickets << endl;
+
+    cout<< setprecision(2) << fixed;
+
+    cout<< "gross box income:" << setw(15) << gross_box << endl;
+
+    cout << "Net box office income:" << setw(15) << net_box << endl;
+
+    cout << "amount paid to distributor:" << setw(15) << paid << endl;
 
 
+
+   
+
+
+
+
+
+    
 
 
 }
