@@ -30,7 +30,7 @@ int main()
     paid= gross_box - net_box;
     //the basic mathematical equation for the gross box, net box and paid
 
-    cout<< "Movie name:"<< setw(15)<<movie_name<< endl;
+    cout<< "Movie name:"<< setw(30)<<movie_name<< endl;
 
     cout<< "Adult tickets sold:"<< setw(15) << adult_tickets << endl;
 
@@ -38,11 +38,11 @@ int main()
 
     cout<< setprecision(2) << fixed;
 
-    cout<< "gross box income:" << setw(15) << gross_box << endl;
+    cout<< "gross box income:"<< right << setw(15) <<"$"<< gross_box << endl;
 
-    cout << "Net box office income:" << setw(15) << net_box << endl;
+    cout << "Net box office income:" <<right<< setw(10) <<" $ "<< net_box << endl;
 
-    cout << "amount paid to distributor:" << setw(15) << paid << endl;
+    cout << "amount paid to distributor:"<< right << setw(5) << "$" << paid << endl;
 
 
 
