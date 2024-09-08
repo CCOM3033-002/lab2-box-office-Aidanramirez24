@@ -30,19 +30,39 @@ int main()
     paid= gross_box - net_box;
     //the basic mathematical equation for the gross box, net box and paid
 
-    cout<< "Movie name:"<< setw(30)<<movie_name<< endl;
+    //im going to try and separate each setw or output by making individual collumns using left and right 
 
-    cout<< "Adult tickets sold:"<< setw(15) << adult_tickets << endl;
+    cout<< left << setw(27) << "Movie name:";
 
-    cout<< "child tickets sold:"<< setw(15)<< child_tickets << endl;
+    cout<< right <<setw(26)<<movie_name<< endl;
+
+    cout<< left << setw(27) << "Adult tickets sold:";
+
+    cout<< right << setw(23) << adult_tickets << endl;
+
+    cout<< left << setw(27) << "child tickets sold:";
+
+    cout << right << setw(23)<< child_tickets << endl;
 
     cout<< setprecision(2) << fixed;
 
-    cout<< "gross box income:"<< right << setw(15) <<"$"<< gross_box << endl;
+    cout<< left << setw(27) << "gross box income:";
 
-    cout << "Net box office income:" <<right<< setw(10) <<" $ "<< net_box << endl;
+    cout << right << setw(18) <<"$"<< gross_box << endl;
 
-    cout << "amount paid to distributor:"<< right << setw(5) << "$" << paid << endl;
+    cout << left << setw(27)<<"Net box office income:" ;
+
+    cout << right << setw(19) <<"$ "<< net_box << endl;
+
+    cout << left << setw(27) << "amount paid to distributor:";
+
+    cout << right << setw(18) << "$" << paid << endl;
+
+    //made it column by column very tideous but might work
+    //ok so i fixed a lot i noticed that the reason as to why it was appearing out of line is because some of thesew strings use more space than others
+    // so logically they can't all be the sam size if i want the to be alignes so i tried using setw27 so that all the left column occupied the same amount of bits
+    //or bytes whatever but in the end i think right the command might write over them so i opted to aligning them a bit more manually via using different setw amounts for different outputs
+    
 
 
 
