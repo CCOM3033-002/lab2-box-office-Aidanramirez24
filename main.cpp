@@ -33,8 +33,10 @@ int main()
     //im going to try and separate each setw or output by making individual collumns using left and right 
 
     cout<< left << setw(27) << "Movie name:";
+    // to write the movie name in quotations i need to use backslash for it
 
-    cout<< right <<setw(26)<<movie_name<< endl;
+
+    cout<< right <<setw(17)<< "\"" <<movie_name<< "\"" << endl;
 
     cout<< left << setw(27) << "Adult tickets sold:";
 
@@ -51,8 +53,12 @@ int main()
     cout << right << setw(18) <<"$"<< gross_box << endl;
 
     cout << left << setw(27)<<"Net box office income:" ;
+    //to make the points in here align i had to use if else because i noticed that if the value was way to high the arrangement i made here doesnt work
 
-    cout << right << setw(19) <<"$ "<< net_box << endl;
+    if (net_box >=1000.00 && gross_box <= 10000)
+        cout<< right << setw(18) << "$" << net_box << endl;
+    else
+        cout << right << setw(19) <<"$ "<< net_box << endl;
 
     cout << left << setw(27) << "amount paid to distributor:";
 
